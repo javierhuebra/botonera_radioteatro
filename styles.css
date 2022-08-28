@@ -51,6 +51,9 @@
     font-size: 25px;
     color: white;
     font-weight: bold;
+    user-select: none;
+
+    transition: 0.1s;
 }
 .vacio{
     opacity: 0.3;
