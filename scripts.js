@@ -63,7 +63,7 @@ btnCortina.addEventListener('click', () =>{
     }
     
     cortina.addEventListener("ended",()=>{
-        btnCortina.style.backgroundColor = '#074C61';
+        btnTestigo.style.backgroundColor = '#074C61';
     });
 }); 
 
