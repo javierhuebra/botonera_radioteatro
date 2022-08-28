@@ -52,6 +52,10 @@
     color: white;
     font-weight: bold;
 }
+.vacio{
+    opacity: 0.3;
+    color: #000000;
+}
 
 .container-loading{
     width: 100vw;
