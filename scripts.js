@@ -23,12 +23,10 @@ btnLlamada.addEventListener('click', () =>{
         btnLlamada.style.backgroundColor = '#074C61';
     
     }
-    
-    
-    llamada.addEventListener("ended",()=>{
-        sonando=false;
-        btnLlamada.style.backgroundColor = '#074C61';
-    });
+});
+llamada.addEventListener("ended",()=>{
+    sonando=false;
+    btnLlamada.style.backgroundColor = '#074C61';
 });
 
 btnCortina.addEventListener('click', () =>{
@@ -44,11 +42,10 @@ btnCortina.addEventListener('click', () =>{
         btnCortina.style.backgroundColor = '#074C61';
     
     }
-    
-    cortina.addEventListener("ended",()=>{
-        sonando=false;
-        btnCortina.style.backgroundColor = '#074C61';
-    });
+});
+cortina.addEventListener("ended",()=>{
+    sonando=false;
+    btnCortina.style.backgroundColor = '#074C61';
 });
 
 
@@ -65,11 +62,10 @@ btnTestigo.addEventListener('click', () =>{
         btnTestigo.style.backgroundColor = '#074C61';
     
     }
-    
-    cortina.addEventListener("ended",()=>{
-        sonando=false;
-        btnTestigo.style.backgroundColor = '#074C61';
-    });
+});
+testigo.addEventListener("ended",()=>{
+    sonando=false;
+    btnTestigo.style.backgroundColor = '#074C61';
 });
 
 btnAplauso.addEventListener('click', () =>{
@@ -85,12 +81,11 @@ btnAplauso.addEventListener('click', () =>{
         btnAplauso.style.backgroundColor = '#074C61';
     
     }
-    
-    aplauso.addEventListener("ended",()=>{
-        sonando=false;
-        btnAplauso.style.backgroundColor = '#074C61';
-    });
 }); 
+aplauso.addEventListener("ended",()=>{
+    sonando=false;
+    btnAplauso.style.backgroundColor = '#074C61';
+});
 
 window.onload = () => {
     document.querySelector(".container").style.opacity='1';
