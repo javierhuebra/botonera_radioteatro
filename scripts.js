@@ -2,12 +2,14 @@ let llamada = new Audio('./audio/llamada.mp3');
 let cortina = new Audio('./audio/cortina.mp3');
 let testigo = new Audio('./audio/testimonio.mp3');
 let aplauso = new Audio('./audio/aplausos.mp3');
+let inicio = new Audio('./audio/inicio.mp3');
 let sonando=false;
 
 btnLlamada=document.querySelector(".llamada");
 btnCortina=document.querySelector(".cortina");
 btnTestigo=document.querySelector(".testigo");
 btnAplauso=document.querySelector(".aplausos");
+btnInicio=document.querySelector(".inicio");
 
 
 btnLlamada.addEventListener('click', () =>{
@@ -85,6 +87,25 @@ btnAplauso.addEventListener('click', () =>{
 aplauso.addEventListener("ended",()=>{
     sonando=false;
     btnAplauso.style.backgroundColor = '#074C61';
+});
+
+btnInicio.addEventListener('click', () =>{
+    console.log("Boton de llamada presionado");
+    if(sonando==false){
+        sonando=true;
+        btnInicio.style.backgroundColor = 'yellowgreen';
+        inicio.play();
+    }else{
+        inicio.pause();
+        inicio.currentTime=0;
+        sonando=false;
+        btnInicio.style.backgroundColor = '#074C61';
+    
+    }
+});
+inicio.addEventListener("ended",()=>{
+    sonando=false;
+    btnInicio.style.backgroundColor = '#074C61';
 });
 
 window.onload = () => {
