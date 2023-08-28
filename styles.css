@@ -44,6 +44,7 @@
     height: 100%;
     
 }
+
 .boton{
     width: 120px;
     height: 120px;
@@ -62,6 +63,12 @@
     border: 7px solid #0C88AD;
 
     
+}
+.cuco{
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(20, 73, 20);
+    font-size: 45px;
+    border-radius: 0;
 }
 .vacio{
     box-shadow:none;

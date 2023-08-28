@@ -3,6 +3,8 @@ let cortina = new Audio('./audio/cortina.mp3');
 let testigo = new Audio('./audio/testimonio.mp3');
 let aplauso = new Audio('./audio/aplausos.mp3');
 let inicio = new Audio('./audio/inicio.mp3');
+let caja = new Audio('./audio/caja.mp3');
+let cuco = new Audio('./audio/javi.mp3');
 let sonando=false;
 
 btnLlamada=document.querySelector(".llamada");
@@ -10,6 +12,8 @@ btnCortina=document.querySelector(".cortina");
 btnTestigo=document.querySelector(".testigo");
 btnAplauso=document.querySelector(".aplausos");
 btnInicio=document.querySelector(".inicio");
+btnCaja=document.querySelector(".caja");
+btnCuco=document.querySelector(".cuco");
 
 
 btnLlamada.addEventListener('click', () =>{
@@ -107,6 +111,46 @@ inicio.addEventListener("ended",()=>{
     sonando=false;
     btnInicio.style.backgroundColor = '#074C61';
 });
+
+btnCaja.addEventListener('click', () =>{
+    console.log("Boton de Caja presionado");
+    if(sonando==false){
+        sonando=true;
+        btnCaja.style.backgroundColor = 'yellowgreen';
+        caja.play();
+    }else{
+        caja.pause();
+        caja.currentTime=0;
+        sonando=false;
+        btnCaja.style.backgroundColor = '#074C61';
+    
+    }
+});
+caja.addEventListener("ended",()=>{
+    sonando=false;
+    btnCaja.style.backgroundColor = '#074C61';
+});
+
+btnCuco.addEventListener('click', () =>{
+    console.log("Boton de javi presionado");
+    if(sonando==false){
+        sonando=true;
+        btnCuco.style.backgroundColor = 'green';
+        cuco.play();
+    }else{
+        cuco.pause();
+        cuco.currentTime=0;
+        sonando=false;
+        btnCuco.style.backgroundColor = 'black';
+    
+    }
+});
+cuco.addEventListener("ended",()=>{
+    sonando=false;
+    btnCuco.style.backgroundColor = 'black';
+});
+
+
 
 window.onload = () => {
     document.querySelector(".container").style.opacity='1';
