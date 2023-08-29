@@ -4,7 +4,10 @@ let testigo = new Audio('./audio/testimonio.mp3');
 let aplauso = new Audio('./audio/aplausos.mp3');
 let inicio = new Audio('./audio/inicio.mp3');
 let caja = new Audio('./audio/caja.mp3');
-let cuco = new Audio('./audio/javi.mp3');
+let cuco = new Audio('./audio/timbre.mp3');//esto es cuco
+let piano = new Audio('./audio/piano.mp3');
+let bosqueTene = new Audio('./audio/bosquetenebroso.mp3');
+let puerta = new Audio('./audio/puerta.mp3');
 let sonando=false;
 
 btnLlamada=document.querySelector(".llamada");
@@ -14,7 +17,9 @@ btnAplauso=document.querySelector(".aplausos");
 btnInicio=document.querySelector(".inicio");
 btnCaja=document.querySelector(".caja");
 btnCuco=document.querySelector(".cuco");
-
+btnPiano=document.querySelector(".piano");
+btnBosqueTene=document.querySelector(".bosqueTenebroso");
+btnPuerta=document.querySelector(".puerta");
 
 btnLlamada.addEventListener('click', () =>{
     console.log("Boton de llamada presionado");
@@ -135,21 +140,77 @@ btnCuco.addEventListener('click', () =>{
     console.log("Boton de javi presionado");
     if(sonando==false){
         sonando=true;
-        btnCuco.style.backgroundColor = 'green';
+        btnCuco.style.backgroundColor = 'yellowgreen';
         cuco.play();
     }else{
         cuco.pause();
         cuco.currentTime=0;
         sonando=false;
-        btnCuco.style.backgroundColor = 'black';
+        btnCuco.style.backgroundColor = '#074C61';
     
     }
 });
 cuco.addEventListener("ended",()=>{
     sonando=false;
-    btnCuco.style.backgroundColor = 'black';
+    btnCuco.style.backgroundColor = '#074C61';
 });
 
+btnPiano.addEventListener('click', () =>{
+    console.log("Boton de piano presionado");
+    if(sonando==false){
+        sonando=true;
+        btnPiano.style.backgroundColor = 'yellowgreen';
+        piano.play();
+    }else{
+        piano.pause();
+        piano.currentTime=0;
+        sonando=false;
+        btnPiano.style.backgroundColor = '#074C61';
+    
+    }
+});
+piano.addEventListener("ended",()=>{
+    sonando=false;
+    btnPiano.style.backgroundColor = '#074C61';
+});
+
+btnBosqueTene.addEventListener('click', () =>{
+    console.log("Boton de piano presionado");
+    if(sonando==false){
+        sonando=true;
+        btnBosqueTene.style.backgroundColor = 'yellowgreen';
+        bosqueTene.play();
+    }else{
+        bosqueTene.pause();
+        bosqueTene.currentTime=0;
+        sonando=false;
+        btnBosqueTene.style.backgroundColor = '#074C61';
+    
+    }
+});
+bosqueTene.addEventListener("ended",()=>{
+    sonando=false;
+    btnBosqueTene.style.backgroundColor = '#074C61';
+});
+
+btnPuerta.addEventListener('click', () =>{
+    console.log("Boton de piano presionado");
+    if(sonando==false){
+        sonando=true;
+        btnPuerta.style.backgroundColor = 'yellowgreen';
+        puerta.play();
+    }else{
+        puerta.pause();
+        puerta.currentTime=0;
+        sonando=false;
+        btnPuerta.style.backgroundColor = '#074C61';
+    
+    }
+});
+puerta.addEventListener("ended",()=>{
+    sonando=false;
+    btnPuerta.style.backgroundColor = '#074C61';
+});
 
 
 window.onload = () => {
